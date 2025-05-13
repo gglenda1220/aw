@@ -259,6 +259,8 @@
     let segundo_apellido = document.getElementById("segundo_apellido").value.toLocaleUpperCase();
     let output = primer_apellido + ";" + segundo_apellido + ";" + raiz.innerHTML;
 
+debugger;
+
     let response = await fetch("procesar2.php", {
       method: "POST",
       body: output

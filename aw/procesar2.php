@@ -1,5 +1,7 @@
 <?php
 $html = file_get_contents("php://input");
+print_r($html);
+die();
 
 $pc1 = strpos($html, ";");
 $pc2 = strpos($html, ";", $pc1 + 1);
