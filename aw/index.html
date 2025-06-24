@@ -84,9 +84,19 @@
 
 <script>
   function hoy() {
+
     let date = new Date();
-    let r = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
+    let r = date.getFullYear() + "-" + (date.getMonth() + 1).toString().padStart(2, '0') + "-" + date.getDate();
     return r;
+  }
+
+  function cambiarFechaEnTodos(e) {
+
+    const f = e.value;
+    document.getElementById("fechaHoy").value = f;
+    document.getElementById("fechaHoy2").value = f;
+    document.getElementById("fechaHoy3").value = f;
+    document.getElementById("fechaHoy4").value = f;
   }
 
   function colocarFamilia() {
@@ -322,12 +332,12 @@
       <p>
         <input type="checkbox">
         <b>
-     Carta Compromiso del Alumno</b> (firmada por cada alumno desde PreKinder hasta 12th Grade).
+          Carta Compromiso del Alumno</b> (firmada por cada alumno desde PreKinder hasta 12th Grade).
       </p>
       <p>
         <input type="checkbox">
         <b>
-        Autorización (uso de imagen, nombres/apellidos y grupo unidireccional de whatsapp) 
+          Autorización (uso de imagen, nombres/apellidos y grupo unidireccional de whatsapp)
       </p>
 
       <p>
@@ -335,7 +345,7 @@
         <b>
           Comprobante de pago de inscripción</b> (si su pago es en efectivo, debe pasar por administración).
       </p>
-     
+
       <p>
         <input type="checkbox">
         <b>
@@ -346,7 +356,8 @@
         <input type="checkbox">
         <b>
           Solvencia de Extracátedra </b> (los que tienen a sus representados en actividades de Extracátedra, deben
-        agregar al sobre la solvencia que le ha sido entregada. Si aún no la tienen, pueden solicitarla en el Colegio el mismo día de la inscripción).
+        agregar al sobre la solvencia que le ha sido entregada. Si aún no la tienen, pueden solicitarla en el Colegio el
+        mismo día de la inscripción).
       </p>
       <h2>2. DOCUMENTOS POR ALUMNO REGULAR: </h2>
       <p>
@@ -402,7 +413,8 @@
       <p>
         <input type="checkbox">
         <b>
-          Resultados de las evaluaciones </b> (oftalmológica, auditiva y de lenguaje. Para PreKinder, Kinder y 1st Grade). Si ya
+          Resultados de las evaluaciones </b> (oftalmológica, auditiva y de lenguaje. Para PreKinder, Kinder y 1st
+        Grade). Si ya
         fueron
         entregados en la evaluación de admisión, no es necesario incluirlas en el sobre.
       </p>
@@ -416,9 +428,9 @@
 
       <p>
         <input type="checkbox">
-        
+
         <b>Boleta de promoción</b> (Primaria)<b> o Certificación de calificaciones</b> (Media General).
-        
+
       </p>
       <p>
         <input type="checkbox">
@@ -429,7 +441,7 @@
         <input type="checkbox">
         <b>
           Dos(2) cartas de recomendación de docentes del colegio de procedencia </b>(Media General).
-       
+
       </p>
 
       <h2 style="line-height: 0.5;">RECUERDE QUE, PARA PROCESAR SU INSCRIPCIÓN, USTED DEBE:</h2>
@@ -449,7 +461,7 @@
     <div class="salto">
       <img src="banner.png" alt="logo">
       <h1>FICHA MÉDICA Y DE CONTACTO 2025-2026</h1>
-    
+
 
       <table style="margin-left: auto; margin-right: auto; border: 1px solid black;">
         <tr>
@@ -461,7 +473,7 @@
         </tr>
       </table>
 
- <h2 style="text-align: center;">CONTACTOS DE EMERGENCIA</h2>
+      <h2 style="text-align: center;">CONTACTOS DE EMERGENCIA</h2>
       <table>
         <thead>
           <tr>
@@ -542,20 +554,16 @@
             Alumno
           </td>
           <td>
-            <input type="text" name="v[]" id="nombres_alumno1" placeholder="Nombre(s)"
-              onblur="colocarAlumnos()">
+            <input type="text" name="v[]" id="nombres_alumno1" placeholder="Nombre(s)" onblur="colocarAlumnos()">
           </td>
           <td>
-            <input type="text" name="v[]" id="nombres_alumno2" placeholder="Nombre(s)"
-              onblur="colocarAlumnos()">
+            <input type="text" name="v[]" id="nombres_alumno2" placeholder="Nombre(s)" onblur="colocarAlumnos()">
           </td>
           <td>
-            <input type="text" name="v[]" id="nombres_alumno3" placeholder="Nombre(s)"
-              onblur="colocarAlumnos()">
+            <input type="text" name="v[]" id="nombres_alumno3" placeholder="Nombre(s)" onblur="colocarAlumnos()">
           </td>
           <td>
-            <input type="text" name="v[]" id="nombres_alumno4" placeholder="Nombre(s)"
-              onblur="colocarAlumnos()">
+            <input type="text" name="v[]" id="nombres_alumno4" placeholder="Nombre(s)" onblur="colocarAlumnos()">
           </td>
         </tr>
         <tr>
@@ -994,7 +1002,7 @@
             <input type="text" name="v[]" id="fecha_nacimiento">
           </td>
         </tr>
- <tr>
+        <tr>
           <td>
             ¿Recibe algún medicamento?¿Cuál(es)?
           </td>
@@ -1015,8 +1023,10 @@
 
       </table>
 
-      <p><b><span style="background-color: yellow;">NOTA:</b> <span style="background-color: yellow;">Anexe a esta ficha una fotocopia de la Tarjeta de Vacunación de su(s) representado(s).</span> </p>
-      </span><p>
+      <p><b><span style="background-color: yellow;">NOTA:</b> <span style="background-color: yellow;">Anexe a esta ficha
+          una fotocopia de la Tarjeta de Vacunación de su(s) representado(s).</span> </p>
+      </span>
+      <p>
         Por medio de la presente, autorizo al médico del colegio a administrar medicación general a mi(s)
         representado(s) cuando sea necesario durante su estancia en el colegio.
       </p>
@@ -1024,11 +1034,11 @@
       <div
         style="width: fit-content;text-align: center;margin-top:1.5cm; margin-left: auto; margin-right: auto; border-top: 1px solid black;">
         FIRMA DEL REPRESENTANTE LEGAL
-        <input style="display:block; margin-left: auto; margin-right: auto;" type="text" placeholder="Cédula de identidad">
+        <input style="display:block; margin-left: auto; margin-right: auto;" type="text"
+          placeholder="Cédula de identidad">
         Caracas, <input style="display:inline; margin-top:8px; margin-left: auto; margin-right: auto;" type="date"
-          placeholder="Fecha" id="fechaHoy" name="v[]">
+          placeholder="Fecha" id="fechaHoy" name="fechaHoy" onchange="cambiarFechaEnTodos(this)">
         <script>
-          console.log(hoy());
           document.getElementById("fechaHoy").value = hoy();
         </script>
       </div>
@@ -1052,7 +1062,7 @@
         </tr>
       </table>
 
-            <h2>Por medio de la presente me comprometo a:</h2>
+      <h2>Por medio de la presente me comprometo a:</h2>
 
       <ol>
         <li>
@@ -1162,8 +1172,8 @@
               <input type="radio" id="cedulaP" name="cedula1">
               <label for="cedulaP">P</label>
               <input type="text" placeholder="Número">
-              
-            
+
+
             </fieldset>
             <div style="display: inline-block;">
               FIRMA DEL ALUMNO:
@@ -1494,13 +1504,13 @@
           </td>
         </tr>
       </table>
-    <div style="width: fit-content;text-align: center;margin-top:1.5cm; margin-left: auto; margin-right: auto;">
- 
-          Caracas, <input style="display:inline; margin-top:8px; margin-left: auto; margin-right: auto;" type="date"
-          placeholder="Fecha" id="fechaHoy" name="v[]">
+      <div style="width: fit-content;text-align: center;margin-top:1.5cm; margin-left: auto; margin-right: auto;">
+
+        Caracas, <input style="display:inline; margin-top:8px; margin-left: auto; margin-right: auto;" type="date"
+          placeholder="Fecha" id="fechaHoy2" name="fechaHoy" onchange="cambiarFechaEnTodos(this)">
         <script>
-          console.log(hoy());
-          document.getElementById("fechaHoy").value = hoy();
+
+          document.getElementById("fechaHoy2").value = hoy();
         </script>
       </div>
 
@@ -1516,7 +1526,7 @@
       <table style="margin-left: auto; margin-right: auto; border: 1px solid black;">
         <tr>
           <h1>AUTORIZACIÓN</h1>
-      
+
           <td>
             <h1>FAMILIA</h1>
           </td>
@@ -1864,27 +1874,31 @@
         acceso
         a
         la(s) plataforma(s) donde estará(n) disponible(s). Por otro lado, la institución se compromete a que, por su
-        parte, la utilización de estas imágenes, audiovisuales, y NOMBRES Y APELLIDOS en ningún caso supondrá un daño al honor
-        o a la reputación de mi(s) representado(s). Con la suscripción de la presente autorización, declaro que nada tengo
+        parte, la utilización de estas imágenes, audiovisuales, y NOMBRES Y APELLIDOS en ningún caso supondrá un daño al
+        honor
+        o a la reputación de mi(s) representado(s). Con la suscripción de la presente autorización, declaro que nada
+        tengo
         que reclamar por concepto de indemnizaciones o cualquier otro tipo de remuneración.
 
-            <br>
-          <p>  
-        <h2 style="text-align: left;">Autorizo publicar la siguiente información de mi(s) representado(s): </h2>
-      </p>  
-
-      <p> 
-     <h2 style="text-align: center;">Material fotográfico y/o audiovisual:  &nbsp;&nbsp;    Si :<input type="checkbox">  No: <input type="checkbox">  
-      &nbsp;  Nombres y apellidos: &nbsp;&nbsp; Si: <input type="checkbox">    &nbsp;      NO: <input type="checkbox"> </h2>
-
         <br>
-        En Caracas, a los
-        <input style="display:inline; margin-top:8px; margin-left: auto; margin-right: auto;" type="date"
-          placeholder="Fecha" id="fechaHoy2">
-        <script>
-          console.log(hoy());
-          document.getElementById("fechaHoy2").value = hoy();
-        </script>
+      <p>
+      <h2 style="text-align: left;">Autorizo publicar la siguiente información de mi(s) representado(s): </h2>
+      </p>
+
+      <p>
+      <h2 style="text-align: center;">Material fotográfico y/o audiovisual: &nbsp;&nbsp; Si :<input type="checkbox"> No:
+        <input type="checkbox">
+        &nbsp; Nombres y apellidos: &nbsp;&nbsp; Si: <input type="checkbox"> &nbsp; NO: <input type="checkbox">
+      </h2>
+
+      <br>
+      En Caracas, a los
+      <input style="display:inline; margin-top:8px; margin-left: auto; margin-right: auto;" type="date"
+        placeholder="Fecha" id="fechaHoy3" name="fechaHoy" onchange="cambiarFechaEnTodos(this)">
+      <script>
+        console.log(hoy());
+        document.getElementById("fechaHoy3").value = hoy();
+      </script>
       </p>
 
       <table style="margin-left: auto; margin-right: auto; border: 1px solid black;">
@@ -1914,7 +1928,7 @@
                   <input type="text" placeholder="Nombres y apellidos">
                 </td>
               </tr>
-              
+
               <tr>
                 <td>
                   Número de celular
@@ -1952,7 +1966,7 @@
                   <input type="text" placeholder="Nombres y apellidos">
                 </td>
               </tr>
-             
+
               <tr>
                 <td>
                   Número de celular
@@ -1989,21 +2003,22 @@
         }
       </script>
 
-      <div style="display: inline-block; border: 2px solid black; box-shadow: 2px 2px 2px 2px gray;" >
-        
+      <div style="display: inline-block; border: 2px solid black; box-shadow: 2px 2px 2px 2px gray;">
+
         <p style="display:inline-block; margin-left: 1cm; margin-right: 1cm; text-align: justify">
           <input style="display: inline-block;" type="checkbox" id="acepto" name="acepto" onchange="autorizar()">
-          &#8592; Al hacer clic en este checkbox, autorizo a la Fundación Academia Washington, Rif: J-00056178-8, a hacer uso de mi
+          &#8592; Al hacer clic en este checkbox, autorizo a la Fundación Academia Washington, Rif: J-00056178-8, a
+          hacer uso de mi
           número
           de
           celular, abajo mencionado, para ser agregado a un grupo unidireccional de WhatsApp, con el fin de recibir
           cualquier
           información relacionada al Colegio
           en Caracas, <input style="display:inline; margin-top:8px; margin-left: auto; margin-right: auto;" type="date"
-            placeholder="Fecha" id="fechaHoy3">
+            placeholder="Fecha" id="fechaHoy4" name="fechaHoy" onchange="cambiarFechaEnTodos(this)">
           <script>
             console.log(hoy());
-            document.getElementById("fechaHoy3").value = hoy();
+            document.getElementById("fechaHoy4").value = hoy();
           </script>
           <input style="margin:8px;" type="button" value="Imprimir" onclick="procesar();" id="botonImprimir" disabled>
         </p>
