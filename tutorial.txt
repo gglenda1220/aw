@@ -8,3 +8,6 @@ ssh -i "ACADEMIAWASHIGTON.pem" ubuntu@ec2-35-153-129-70.compute-1.amazonaws.com
 cd /var/www/html/aw 
 5. Hacer pull>
     sudo git pull
+
+
+    
