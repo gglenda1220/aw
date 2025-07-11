@@ -1,0 +1,13 @@
+Para enviar cambios al servidor>
+
+1. Hacer commit y push en Visual Studio
+2. Abrir el terminal control+shift+ñ
+3. Escribir: 
+ssh -i "ACADEMIAWASHIGTON.pem" ubuntu@ec2-35-153-129-70.compute-1.amazonaws.com
+4. Navegar: 
+cd /var/www/html/aw 
+5. Hacer pull>
+    sudo git pull
+
+
+    
